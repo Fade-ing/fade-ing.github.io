@@ -11,42 +11,76 @@
     <style>
         @font-face {
             font-family: "Inter";
-            src: url("Inter-Regular.otf");
+            src: url('Inter-Regular.otf');
         }
         * {
             font-family: "Inter";
+            box-sizing: border-box;
+        }
+        .navigasi a {
+            text-decoration: none;
         }
         .navigasi ul {
             list-style: none;
-        }
-        .utama {
-            margin-bottom: 60px;
-        }
-        .kontak ul {
             display: flex;
             justify-content: space-around;
-            list-style: none;
         }
-        .bawah {
-            position: fixed;
-            left: 0;
-            bottom: 0;
-            width: 100%;
-            background-color: dimgray;
-            color: white;
+        .kontak ul {
+            list-style: none;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 100px;
+        }
+        .kontak h2 {
             text-align: center;
         }
+        .kontak a {
+            text-decoration: none;
+            transition: 500ms;
+        }
+        .utama h1 {
+            text-align: center;
+        }
+        .gambar {
+            display: flex;
+            justify-content: center;
+        }
+        .navigasi {
+            background-color: #5CDB95;
+            padding: 12px;
+            border-radius: 14px;
+        }
+        .navigasi a {
+            color: white;
+            transition: 500ms;
+            padding: 12px;
+            border-radius: 8px;
+        }
+        .navigasi a:hover {
+            background-color: white;
+            color: black;
+        }
+        .navigasi .active {
+            background-color: white;
+            color: black;
+        }
+        /* .kontak a:hover {
+            background-color: #5CDB95;
+            color: white;
+        } */
     </style>
     <div class="navigasi">
         <ul>
-            <li><a href="#">Beranda</a></li>
-            <li><a href="terbaru.html">Terbaru</a></li>
+            <li><a class="active" href="#">Beranda</a></li>
+            <li><a href="#">Terbaru</a></li>
             <li><a href="#">Trending</a></li>
         </ul>
     </div>
     <div class="utama">
-        <h1>KA Maros-Barru Beroperasi Oktober, Begini Progres di Makassar dan Parepare</h1>
-        <img src="berita1.jpeg" alt="Berita 1">
+        <h1><b>KA Maros-Barru Beroperasi Oktober, Begini Progres di Makassar dan Parepare</b></h1>
+        <div class="gambar">
+            <img src="berita1.jpeg" alt="Berita 1">
+        </div>
         <p>Pengerjaan rel kereta api (KA) rute Maros-Barru sepanjang 71 kilometer yang merupakan bagian dari megaproyek kereta api Makassar-Parepare ditarget rampung Oktober tahun ini. Lantas bagaimana progres pengerjaan rel ke arah Makassar dan Parepare?</p>
         <p><i>"Jadi proyek kereta api Makassar-Parepare ini ditetapkan di RPJMN (rencana pembangunan jangka menengah nasional) harus tuntas 2024. Sekarang sudah 2022, sementara judulnya Makassar-Parepare,"</i> ungkap Kepala Balai Pengelola Kereta Api (BPKA) Sulawesi Selatan (Sulsel) Andi Amanna Gappa kepada detikSulsel, Senin (29/8/2022).</p>
         <p>Amanna Gappa menyebut saat ini memang pengerjaan rel prioritas untuk rute Maros-Barru. Ini untuk mengejar proyek strategis nasional (PSN) bisa segera beroperasi. Lantaran sudah 8 tahun dimulai namun tak kunjung beroperasi lantaran selalu terhambat di pembebasan lahan.</p>
@@ -60,18 +94,16 @@
         <p>Saat ini pihaknya memprioritaskan pengerjaan ke arah Makassar. Pembebasan lahan ditargetkan bisa rampung tahun ini. Sehingga tahun depan sudah bisa masuk ke tahapan konstruksi atau pengerjaan rel.</p>
         <p><i>"Pembebasan lahan diharap lancar karena kita hindari pengerjaan rel dilakukan secara parsial atau terpotong-potong. Jadi untuk segmen E ini sekitar 10 kilometer lebih. Panjang ke Makassar sekitar 5 kilometer. Pembebasan lahan diharap selesai tahun ini karena konstruksi kita target sudah dimulai tahun depan,"</i> tandasnya.</p>
         <p><b>Selanjutnya anggaran pembebasan lahan ke Makassar</b></p>
-        <div class="kontak">
-            <p align="center">Hubungi Kami</p>
-            <ul>
-                <li><a href="https://facebook.com">Facebook</a></li>
-                <li><a href="https://twitter.com">Twitter</a></li>
-                <li><a href="https://instagram.com">Instagram</a></li>
-                <li><a href="https://web.telegram.org">Telegram</a></li>
-            </ul>
-        </div>
     </div>
-    <div class="bawah">
-        <p>Berita Pangkep</p>
+    <div class="kontak">
+        <h2>Hubungi Kami</h2>
+        <ul>
+            <li><a class="fa fa-facebook" href="https://facebook.com"></a></li>
+            <li><a class="fa fa-twitter" href="https://twitter.com"></a></li>
+            <li><a class="fa fa-instagram" href="https://instagram.com"></a></li>
+            <li><a class="fa fa-telegram" href="https://web.telegram.org"></a></li>
+            <li><a class="fa fa-whatsapp" href="https://web.whatsapp.com"></a></li>
+        </ul>
     </div>
 </body>
 </html>
