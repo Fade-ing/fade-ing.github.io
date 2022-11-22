@@ -17,13 +17,20 @@
             font-family: "Inter";
             box-sizing: border-box;
         }
-        .navigasi a {
-            text-decoration: none;
+        body {
+            /* background-image: url('background.jpg');
+            background-repeat: no-repeat;
+            background-size: cover; */
+            background: linear-gradient(to bottom, #ff5050 0%, #ff9966 100%);
+        }
+        section {
+            background-color: rgba(0, 0, 0, 0.103);
+            border-radius: 1rem;
         }
         .navigasi ul {
             list-style: none;
             display: flex;
-            justify-content: space-around;
+            justify-content: space-evenly;
         }
         .kontak ul {
             list-style: none;
@@ -33,28 +40,45 @@
         }
         .kontak h2 {
             text-align: center;
+            color: white;
+            /* text-decoration: underline; */
         }
         .kontak a {
             text-decoration: none;
-            transition: 500ms;
+            transition: 500ms ease;
+            color: white;
+        }
+        .kontak h2 {
+            font-size: 50px;
+        }
+        .utama p {
+            color: white;
+            padding: 0 14.5rem;
+            text-align: justify;
         }
         .utama h1 {
             text-align: center;
+            font-size: 44px;
+            color: whitesmoke;
         }
         .gambar {
             display: flex;
             justify-content: center;
         }
+        .gambar img {
+            border-radius: 1rem;
+        }
         .navigasi {
-            background-color: #5CDB95;
-            padding: 12px;
-            border-radius: 14px;
+            background-color: black;
+            padding: 10.5px;
+            border-radius: 1rem;
         }
         .navigasi a {
             color: white;
             transition: 500ms;
             padding: 12px;
-            border-radius: 8px;
+            border-radius: 1rem;
+            text-decoration: none;
         }
         .navigasi a:hover {
             background-color: white;
@@ -64,22 +88,40 @@
             background-color: white;
             color: black;
         }
+        .link {
+            display: flex;
+            justify-content: center;
+            gap: 4px;
+        }
+        .link input, .link button {
+            border-radius: 2rem;
+            border: none;
+        }
+        .kontak a:hover {
+            transform: scale(1.4);
+        }
+        hr {
+            height: 1px;
+            border: none;
+            background-color: white;
+        }
         /* .kontak a:hover {
             background-color: #5CDB95;
             color: white;
         } */
     </style>
+    <section>
     <div class="navigasi">
         <ul>
             <li><a class="active" href="#">Beranda</a></li>
-            <li><a href="#">Terbaru</a></li>
-            <li><a href="#">Trending</a></li>
+            <li><a href="terbaru.html">Terbaru</a></li>
+            <!-- <li><a href="">↓</a></li> -->
         </ul>
     </div>
     <div class="utama">
         <h1><b>KA Maros-Barru Beroperasi Oktober, Begini Progres di Makassar dan Parepare</b></h1>
         <div class="gambar">
-            <img src="berita1.jpeg" alt="Berita 1">
+            <img src="berita.jpeg" alt="Berita 1">
         </div>
         <p>Pengerjaan rel kereta api (KA) rute Maros-Barru sepanjang 71 kilometer yang merupakan bagian dari megaproyek kereta api Makassar-Parepare ditarget rampung Oktober tahun ini. Lantas bagaimana progres pengerjaan rel ke arah Makassar dan Parepare?</p>
         <p><i>"Jadi proyek kereta api Makassar-Parepare ini ditetapkan di RPJMN (rencana pembangunan jangka menengah nasional) harus tuntas 2024. Sekarang sudah 2022, sementara judulnya Makassar-Parepare,"</i> ungkap Kepala Balai Pengelola Kereta Api (BPKA) Sulawesi Selatan (Sulsel) Andi Amanna Gappa kepada detikSulsel, Senin (29/8/2022).</p>
@@ -96,14 +138,29 @@
         <p><b>Selanjutnya anggaran pembebasan lahan ke Makassar</b></p>
     </div>
     <div class="kontak">
-        <h2>Hubungi Kami</h2>
+        <h2>Bagikan Berita!</h2>
         <ul>
             <li><a class="fa fa-facebook" href="https://facebook.com"></a></li>
             <li><a class="fa fa-twitter" href="https://twitter.com"></a></li>
-            <li><a class="fa fa-instagram" href="https://instagram.com"></a></li>
+            <li><a class="fa fa-instagram" href="https://instagram.com/defavolia"></a></li>
             <li><a class="fa fa-telegram" href="https://web.telegram.org"></a></li>
             <li><a class="fa fa-whatsapp" href="https://web.whatsapp.com"></a></li>
         </ul>
     </div>
+    <div class="link">
+        <input type="text" value="www.beritapangkep.co.id" id="link-copy">
+        <button onclick="copyToClipboard()">Salin!</button>
+    </div>
+    <br>
+    </section>
+    <script>
+        function copyToClipboard() {
+            var copyText = document.getElementById("link-copy");
+            copyText.select();
+            copyText.setSelectionRange(0, 99999);
+            navigator.clipboard.writeText(copyText.value);
+            alert("Link telah disalin!: " + copyText.value);
+        }
+    </script>
 </body>
 </html>
