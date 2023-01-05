@@ -1,2 +1,1 @@
-# belajar
-Tugas sekolah bang, buat cadangan
+Simple linktr website style for an school assignment
